@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Title="Custo da Viagem"
+             x:Class="AppPedagio.MainPage">
+
+    <Grid RowSpacing="10" ColumnSpacing="10"
+      Padding="5" BackgroundColor="#eee">
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+        </Grid.RowDefinitions>
+
+        <Label Text="Origem:"
+           Grid.Row="1" Grid.Column="0"
+           Style="{StaticResource LabelRotulo }"/>
+
+        <Label Text="Destino:"
+           Grid.Row="2" Grid.Column="0"
+           Style="{StaticResource LabelRotulo }"/>
+
+        <Entry x:Name="etyOrigem" Placeholder="Nome da Cidade"
+           Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
+           Keyboard="Text"
+           Style="{StaticResource TextEntrada}"/>
+
+        <Entry x:Name="etyDestino" Placeholder="Nome da Cidade"
+           Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="2"
+           Keyboard="Text"
+           Style="{StaticResource TextEntrada}"/>
+
+        <Label Text="Rendimento"
+           Grid.Row="3" Grid.ColumnSpan="3"
+           HorizontalTextAlignment="Center"
+           Style="{StaticResource Titulo }"/>
+
+        <Label Text="Distância:"
+           Grid.Row="4" Grid.Column="0"
+           Style="{StaticResource LabelRotulo }"/>
+
+        <Label x:Name="lblRendimento" Text="Rendimento:"
+           Grid.Row="5" Grid.Column="0"
+           Style="{StaticResource LabelRotulo }"/>
+
+        <Entry x:Name="etyDistancia" Placeholder="Km"
+           Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
+           Style="{StaticResource TextEntrada}"/>
+
+        <Entry x:Name="etyRendimento" Placeholder="Km/l"
+           Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
+           Style="{StaticResource TextEntrada}"/>
+
+        <Label  Text="Preço da gasolina:"
+           Grid.Row="8" Grid.Column="0" Grid.RowSpan="2"
+           Style="{StaticResource LabelRotulo }"/>
+
+        <Entry x:Name="etyGasolinaP" Placeholder="R$ 0.0"
+         Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2"
+         Style="{StaticResource TextEntrada}"/>
+
+        <Button x:Name="btnPedagio" Text="Adicionar Pedágio"
+            Grid.Row="8" Grid.Column="2"
+            Clicked="btnPedagio_Clicked"/>
+
+        <Button Text="Lista de Pedágios"
+            Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3"
+            Clicked="Button_Clicked"/>
+
+        <Button Text="Calcular"
+            Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2"
+            Clicked="Button_Clicked_1"/>
+
+    </Grid>
+</ContentPage>
