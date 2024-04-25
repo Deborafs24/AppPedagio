@@ -37,6 +37,19 @@
            Grid.Row="2" Grid.Column="0"
            Style="{StaticResource LabelRotulo }"/>
 
+        <Label Text="Distância:"
+           Grid.Row="3" Grid.Column="0"
+           Style="{StaticResource LabelRotulo }"/>
+
+        <Label Text="Rendimento"
+           Grid.Row="4" Grid.ColumnSpan="0"
+           HorizontalTextAlignment="Center"
+           Style="{StaticResource Titulo }"/>
+
+        <Label  Text="Preço da gasolina:"
+           Grid.Row="5" Grid.Column="0" Grid.RowSpan="0"
+           Style="{StaticResource LabelRotulo }"/>
+
         <Entry x:Name="etyOrigem" Placeholder="Nome da Cidade"
            Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2"
            Keyboard="Text"
@@ -47,45 +60,28 @@
            Keyboard="Text"
            Style="{StaticResource TextEntrada}"/>
 
-        <Label Text="Rendimento"
-           Grid.Row="3" Grid.ColumnSpan="3"
-           HorizontalTextAlignment="Center"
-           Style="{StaticResource Titulo }"/>
-
-        <Label Text="Distância:"
-           Grid.Row="4" Grid.Column="0"
-           Style="{StaticResource LabelRotulo }"/>
-
-        <Label x:Name="lblRendimento" Text="Rendimento:"
-           Grid.Row="5" Grid.Column="0"
-           Style="{StaticResource LabelRotulo }"/>
-
         <Entry x:Name="etyDistancia" Placeholder="Km"
-           Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
+           Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"
            Style="{StaticResource TextEntrada}"/>
 
         <Entry x:Name="etyRendimento" Placeholder="Km/l"
-           Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
+           Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
            Style="{StaticResource TextEntrada}"/>
 
-        <Label  Text="Preço da gasolina:"
-           Grid.Row="8" Grid.Column="0" Grid.RowSpan="2"
-           Style="{StaticResource LabelRotulo }"/>
-
         <Entry x:Name="etyGasolinaP" Placeholder="R$ 0.0"
-         Grid.Row="8" Grid.Column="1" Grid.ColumnSpan="2"
+         Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
          Style="{StaticResource TextEntrada}"/>
 
-        <Button x:Name="btnPedagio" Text="Adicionar Pedágio"
-            Grid.Row="8" Grid.Column="2"
+        <Button x:Name="btnCalcular" Text="Calcular"
+            Grid.Row="6" Grid.Column="2"
             Clicked="btnPedagio_Clicked"/>
 
-        <Button Text="Lista de Pedágios"
-            Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="3"
+        <Button x:Name="btnAdicionarp" Text="Adicionar Pedágio"
+            Grid.Row="7" Grid.Column="2" Grid.ColumnSpan="3"
             Clicked="Button_Clicked"/>
 
-        <Button Text="Calcular"
-            Grid.Row="10" Grid.Column="0" Grid.ColumnSpan="2"
+        <Button x:Name="Listap" Text="Lista de Pedágios"
+            Grid.Row="8" Grid.Column="2" Grid.ColumnSpan="2"
             Clicked="Button_Clicked_1"/>
 
     </Grid>

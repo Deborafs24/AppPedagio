@@ -1,3 +1,4 @@
+
 namespace AppPedagio.Views;
 
 public partial class AddPedagio : ContentPage
@@ -6,4 +7,9 @@ public partial class AddPedagio : ContentPage
 	{
 		InitializeComponent();
 	}
+
+    private void InitializeComponent()
+    {
+        throw new NotImplementedException();
+    }
 }

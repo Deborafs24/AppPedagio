@@ -1,14 +1,18 @@
-﻿namespace AppPedagio
+﻿using System.Collections.ObjectModel;
+using AppPedagio.Models;
+
+namespace AppPedagio
 {
     public partial class MainPage : ContentPage
     {
-        private App PropriedadesApp;
+        ObservableCollection<Pedagio> lista_pedagio =
+           new ObservableCollection<Pedagio>();
 
         public MainPage()
         {
             InitializeComponent();
 
-            PropridadesApp = (App)Application.Current;
+            lst_pedagio.ItemSource = lista_pedagio;
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
