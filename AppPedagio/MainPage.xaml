@@ -4,6 +4,13 @@
              Title="Custo da Viagem"
              x:Class="AppPedagio.MainPage">
 
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        </Style>
+    </ContentPage.Resources>
+
     <Grid RowSpacing="10" ColumnSpacing="10"
       Padding="5" BackgroundColor="#eee">
 

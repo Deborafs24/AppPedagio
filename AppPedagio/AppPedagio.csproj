@@ -64,22 +64,12 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Views\EditarPedagio.xaml.cs">
-	    <DependentUpon>EditarPedagio.xaml</DependentUpon>
-	  </Compile>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Update="Views\EditarPedagio.xaml">
+	  <MauiXaml Update="Views\ListaPedagio.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\NovoPedagio.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	</ItemGroup>
-
-	<ItemGroup>
-	  <Folder Include="Helpers\" />
 	</ItemGroup>
 
 </Project>

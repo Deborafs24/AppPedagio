@@ -8,35 +8,35 @@ namespace AppPedagio.Models
 {
     public class Pedagio
     {
-        string _origem;
-        string _destino;
-        double _distancia;
-        double _rendimento;
-        double _precogas;
+        public string _Origem {get; set;}
+        public string _Destino { get; set;}
+        public string Local { get; set;}
+        public double Valor { get; set;}
+        public double _Distancia {  get; set;}
+        public double _Rendimento {  get; set;}
+        public double _Precogas {  get; set;}
 
-        public int Id { get; set; }
-
-        public string Origem
+        public string Origem 
         {
-            get => _origem;
+            get => _Origem;
             set
             {
                 if (value == null)
                     throw new Exception("Origem inválida.");
 
-                _origem = value;
+                _Origem = value;
             }
         }
 
         public string Destino
         {
-            get => _destino;
+            get => _Destino;
             set
             {
                 if (value == null)
                     throw new Exception("Destino incorreto.");
 
-                _destino = value;
+                _Destino = value;
             }
         }
 
@@ -44,18 +44,18 @@ namespace AppPedagio.Models
         {
             get
             {
-                return _distancia;
+                return _Distancia;
             }
 
             set
             {
-                if (!double.TryParse(value.ToString(), out _distancia))
-                    _distancia = 0;
+                if (!double.TryParse(value.ToString(), out _Distancia))
+                    _Distancia = 0;
 
                 if (value == 0)
                     throw new Exception("Opção inválida.");
 
-                _distancia = value;
+                _Distancia = value;
             }
         }
 
@@ -63,18 +63,18 @@ namespace AppPedagio.Models
         {
             get
             {
-                return _rendimento;
+                return _Rendimento;
             }
 
             set
             {
-                if (!double.TryParse(value.ToString(), out _rendimento))
-                    _rendimento = 0;
+                if (!double.TryParse(value.ToString(), out _Rendimento))
+                    _Rendimento = 0;
 
                 if (value == 0)
                     throw new Exception("Opção inválida.");
 
-                _rendimento = value;
+                _Rendimento = value;
             }
         }
 
@@ -82,18 +82,18 @@ namespace AppPedagio.Models
         {
             get
             {
-                return _precogas;
+                return _Precogas;
             }
 
             set
             {
-                if (!double.TryParse(value.ToString(), out _precogas))
-                    _precogas = 0.0;
+                if (!double.TryParse(value.ToString(), out _Precogas))
+                    _Precogas = 0.0;
 
                 if (value == 0)
                     throw new Exception("Preço inválido.");
 
-                _precogas = value;
+                _Precogas = value;
             }
         }
     }
