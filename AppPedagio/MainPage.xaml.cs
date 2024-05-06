@@ -11,8 +11,6 @@ namespace AppPedagio
         public MainPage()
         {
             InitializeComponent();
-
-            lst_pedagios.ItemSource = lista_pedagio;
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
@@ -23,7 +21,6 @@ namespace AppPedagio
         private void btnPedagio_Clicked(object sender, EventArgs e)
         {
             double soma = lista_pedagio.Sum(i => (i.Distancia / i.Rendimento));
-            double soma2 = lista_pedagio.Sum(soma + Precogas);
             string msg = $"O total é {soma:C}";
             DisplayAlert("Somatória", msg, "Fechar");
         }

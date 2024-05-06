@@ -19,7 +19,7 @@ namespace AppPedagio
                     );
 
                     _db = new SQLiteDatabaseHelper(path);
-                } // Fecha if verificando de _db é null
+                } // Fecha if verificando se _db é null
 
                 return _db;
             } // Fecha método get
