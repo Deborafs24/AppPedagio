@@ -9,6 +9,17 @@
             <Setter Property="VerticalTextAlignment" Value="Center" />
             <Setter Property="VerticalOptions" Value="FillAndExpand" />
         </Style>
+
+        <Style TargetType="Label" x:Key="LabelRotulo">
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        </Style>
+
+        <Style TargetType="Label" x:Key="TextEntrada">
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+            <Setter Property="VerticalOptions" Value="FillAndExpand" />
+        </Style>
+
     </ContentPage.Resources>
 
     <Grid RowSpacing="10" ColumnSpacing="10"
@@ -48,10 +59,9 @@
            Grid.Row="3" Grid.Column="0"
            Style="{StaticResource LabelRotulo }"/>
 
-        <Label Text="Rendimento"
+        <Label Text="Rendimento:"
            Grid.Row="4" Grid.ColumnSpan="0"
-           HorizontalTextAlignment="Center"
-           Style="{StaticResource Titulo }"/>
+           Style="{StaticResource LabelRotulo }"/>
 
         <Label  Text="Preço da gasolina:"
            Grid.Row="5" Grid.Column="0" Grid.RowSpan="0"
@@ -71,7 +81,7 @@
            Grid.Row="3" Grid.Column="1" Grid.ColumnSpan="2"
            Style="{StaticResource TextEntrada}"/>
 
-        <Entry x:Name="etyRendimento" Placeholder="Km/l"
+        <Entry x:Name="etyRendimento" Placeholder="Km/L"
            Grid.Row="4" Grid.Column="1" Grid.ColumnSpan="2"
            Style="{StaticResource TextEntrada}"/>
 

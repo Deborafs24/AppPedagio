@@ -20,8 +20,14 @@ namespace AppPedagio
 
         private void btnPedagio_Clicked(object sender, EventArgs e)
         {
-            double soma = lista_pedagio.Sum(i => (i.Distancia / i.Rendimento));
-            string msg = $"O total é {soma:C}";
+            double Distancia = Convert.ToDouble(etyDistancia.Text);
+            double Precogas = Convert.ToDouble(etyGasolinaP.Text);
+            double Rendimento = Convert.ToDouble(etyRendimento.Text);
+
+            double conta = Distancia / Rendimento;
+            double conta2 = Precogas * conta;
+
+            string msg = $"O total é {conta2:C}";
             DisplayAlert("Somatória", msg, "Fechar");
         }
 

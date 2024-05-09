@@ -40,4 +40,28 @@ public partial class ListaPedagio : ContentPage
             }
         });
     }
+
+    private async void ToolbarItem_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Views.NovoPedagio());
+    }
+
+    private void ref_carregando_Refreshing(object sender, EventArgs e)
+    {
+        lista_pedagios.Clear();
+        Task.Run(async () =>
+        {
+            List<Pedagio> tmp = await App.Db.GetAll();
+            foreach (Pedagio p in tmp)
+            {
+                lista_pedagios.Add(p);
+            }
+        });
+        ref_carregando.IsRefreshing = false;
+    }
+
+    private void lst_pedagios_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+    {
+
+    }
 }

@@ -1,30 +1,26 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SQLite;
 
 namespace AppPedagio.Models
 {
     public class Pedagio
     {
-        public string _Origem {get; set;}
-        public string _Destino { get; set;}
-        public string Local { get; set;}
-        public double Valor { get; set;}
-        public double _Distancia {  get; set;}
-        public double _Rendimento {  get; set;}
-        public double _Precogas {  get; set;}
+        public string _Origem;
+        public string _Destino;
+        public string Local;
+        public double Valor;
+        public double _Distancia;
+        public double _Rendimento;
+        public double _Precogas;
 
         public string Origem 
         {
-            get => _Origem;
+            get => Origem;
             set
             {
                 if (value == null)
                     throw new Exception("Origem inválida.");
 
-                _Origem = value;
+                Origem = value;
             }
         }
 
