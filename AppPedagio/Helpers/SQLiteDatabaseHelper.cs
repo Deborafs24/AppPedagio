@@ -20,7 +20,7 @@ public class SQLiteDatabaseHelper
     public Task<List<Pedagio>> Update(Pedagio p)
     {
         string sql = "Update Pedagio SET Local=?, " +
-                     "Valor=?";
+                     "WHERE Valor=?";
 
         return _conn.QueryAsync<Pedagio>(sql,
             p.Local, p.Valor);
@@ -34,7 +34,7 @@ public class SQLiteDatabaseHelper
     public Task<List<Pedagio>> Search(string q)
     {
         string sql = "SELECT * FROM Pedagio WHERE " +
-            "Local LIKE '%" + q + "%' ";
+            "local LIKE '%" + q + "%' ";
 
         return _conn.QueryAsync<Pedagio>(sql);
     }

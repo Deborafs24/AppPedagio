@@ -5,7 +5,7 @@
              Title="NovoPedagio">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Salvar" Clicked="ToolbarItem_Clicked"/>
+        <ToolbarItem Text="Adicionar" Clicked="ToolbarItem_Clicked"/>
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
